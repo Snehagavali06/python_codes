@@ -1,0 +1,17 @@
+s = input("Enter a string: ")
+
+longest = ""
+
+for i in range(len(s)):
+    current = ""
+    for j in range(i, len(s)):
+        if s[j] not in current:
+            current += s[j]
+        else:
+            break
+
+    if len(current) > len(longest):
+        longest = current
+
+print("Longest substring:", longest)
+print("Length:", len(longest))
